@@ -8,8 +8,20 @@ use PhpParser\Builder\FunctionLike;
 
 class SiteController extends Controller
 {
-    public function index()
+    public function index($slug=null)
     {
-        return view('frontend.home');
+        if($slug==null)
+        {
+            return $this->home();
+        }
+        else
+        {
+            ...
+        }
+    }
+    #Home
+    private function home()
+    {
+        ...
     }
 }
